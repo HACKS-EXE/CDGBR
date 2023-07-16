@@ -1,12 +1,3 @@
-<?php
-$videos = [
-  'http://zaquiles.servehttp.com/lgp/Star%20Citizen%20%20Dying%20Star%20%20169%20Wallpaper%20Engine%20Video%20Wallpaper.mp4',
-  'http://zaquiles.servehttp.com/lgp/“Cold%20War”%20-%20Call%20of%20Duty®%20Black%20Ops%20Cold%20War%20Main%20Theme.mp4',
-  'http://zaquiles.servehttp.com/lgp/“Cold%20War”%20-%20Call%20of%20Duty®%20Black%20Ops%20Cold%20War%20Main%20Theme.mp4'
-];
-
-$randomVideo = $videos[array_rand($videos)];
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,89 +6,31 @@ $randomVideo = $videos[array_rand($videos)];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Call of Duty® Games Brasil Jogos</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <body>
-<header class="header">
-    <nav class="navbar">
-    <a href="#">Jogos</a>
-    <a href="#">Sobre</a>
-    <a href="#">Configurações</a>
-    <a href="#">Suporte</a>
-    </nav>
-</header>
 <div class="background"></div>
 <div class="container">
     <div class="content">
-        <h2><i class='bx bxl-firebase' ></i>Call of Duty® Games Brasil</h2>
+        <h2 class="pla">Call of Duty® Games Brasil</h2>
         <div class="text-sci">
-            <h2 class="logo">Bem vindo! <br><span>Ao futuro dos cods.</span></h2>
-            <p class="preto">Ajude o projeto a continuar em pé com doações.</p>
-            <div class="social-icons">
-                <a href="https://ioxtream.io/pt-BR/x/mistorgamex" target="_blank"><i class='bx bx-donate-heart'></i></a>
-                <a href="https://www.youtube.com/@MistorGamex" target="_blank"><i class='bx bxl-youtube' ></i></a>
-                <a href="discord://discordapp.com/invite/hFT4eJfQ3u/"><i class='bx bxl-discord-alt'></i></a>
-            </div>
+            <h2 class="pla logo">Bem vindo! <br><span>Ao futuro dos cods.</span></h2>
+            <p class="pla">Ajude o projeto a continuar em pé com doações.</p>
         </div>
     </div>
 
-    <div class="logreg-box <?php echo $activeClass; ?>">
+    <div class="logreg-box">
         <div class="form-box login">
             <form method="post">
-                <h2>Entre na sua conta</h2>
-                <div class="input-box">
-                    <span class="icon"><i class='bx bxs-user'></i></span>
-                    <input class="vai" type="text" name="username" required>
-                    <label for="username">Nome</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
-                    <input type="password" name="password" required>
-                    <label for="password">Senha</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">Lembrar minha Senha</label>
-                    <br><a href="#">Recupera a Senha ?</a>
-                </div>
-                <button type="submit" class="btn">Entra</button>
-
-                <div class="login-register">
-                    <p>Sem conta ?<br><a href="?action=register" class="register-link">Faça uma conta</a></p>
-                </div>
-            </form>
-        </div>
-        <div class="form-box register">
-            <form method="post">
-                <h2>Cadastre uma conta</h2>
-                <div class="input-box">
-                    <span class="icon"><i class='bx bxs-user'></i></span>
-                    <input type="text" name="username" required>
-                    <label for="username">Nome da Sua nova conta</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-                    <input type="password" name="password" required>
-                    <label for="password">Senha</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-                    <input type="password" name="confirm_password" required>
-                    <label for="confirm_password">Confirme a senha</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">Concordo com os termos</label>
-                    <br><a href="#">Recupera a Senha ?</a>
-                </div>
-                <button type="submit" class="btn">Cadastra</button>
-
-                <div class="login-register">
-                    <p>já tem uma conta ?<br><a href="?action=login" class="login-link">Entre nela</a></p>
-                </div>
+              <BR></BR>
+              <BR></BR>
+                <h2 class="pla">CDGBR T7 ONLINE</h2>
+                <BR></BR>
+                <div class="btn" onclick="window.external.runGame()">Inicia jogo</div>
             </form>
         </div>
     </div>
 </div>
 <video id="videoFundo" autoplay loop>
-  <source src="<?php echo $randomVideo; ?>" type="video/mp4">
+  <source src="Floresta-Zombies.mp4" type="video/mp4">
   Seu navegador não suporta reprodução de vídeo.
 </video>
 
@@ -161,42 +94,6 @@ body{
     transform: translateY(0);
     opacity: 1;
 }
-.search-bar{
-    width: 250px;
-    height: 45px;
-    background: transparent;
-    border: 2px solid #e4e4e4;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-}
-.search-bar input{
-    width: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    color: #e4e4e4;
-    padding-left: 10px;
-}
-.search-bar input::placeholder{
-    color: #e4e4e4;
-}
-.search-bar button{
-    width: 40px;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.search-bar button i{
-    font-size: 22px;
-    color: #e4e4e4;
-}
 .container{
     position: absolute;
     top: 50%;
@@ -210,6 +107,9 @@ body{
     border-radius: 10px;
     margin-top: 20px;
 }
+.pla{
+    color: #f77c09;
+}
 .container .content{
     position: absolute;
     top: 0;
@@ -218,7 +118,7 @@ body{
     height: 100%;
     background: transparent;
     padding: 80px;
-    color: #e4e4e4;
+    color: #f77c09;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -247,12 +147,11 @@ body{
     transform: scale(1.2);
 }
 .container .logreg-box{
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     width: calc(100% - 58%);
-    height: 100%;
-    overflow: hidden;
+    transform: translateY(230px);
 }
 .logreg-box .form-box{
     position: absolute;
@@ -347,18 +246,29 @@ body{
     pointer-events: none;
     transition: .5s ease;
 }
-.btn{
-    width: 100%;
-    height: 45px;
-    background: #c4103d;
-    border: none;
-    outline: none;
-    border-radius: 4px;
+.btn:hover{
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(73, 62, 62);
     cursor: pointer;
-    font-size: 16px;
+}
+.btn{
     color: #e4e4e4;
-    font-weight: 500;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    background: rgb(241, 10, 10);
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(73, 62, 62);
+    cursor: pointer;
 }
 .dc{
     width: auto;
