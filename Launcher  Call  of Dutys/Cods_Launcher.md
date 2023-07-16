@@ -1,1 +1,2 @@
-Aqui fica os projeto de launcher para cods, feito em c++ ou c#
+#Aqui fica os projeto dos launcher para cods 
+feito em c++ ou c#
