@@ -37,18 +37,27 @@ def update_script():
 
     if new_version and compare_versions(new_version, __version__) > 0:
         print(f"New version {new_version} found, updating...")
-        
-        # Se o script atual se fecha
-        print("Closing current script...")
-        os.execv(sys.executable, ['python'] + [new_script_path])
-        
-        # O novo script deve deletar o antigo e se auto-copiar
-        old_script_path = os.path.realpath(sys.argv[0])
-        os.remove(old_script_path)  # Deleta o script antigo
-        shutil.copy(new_script_path, old_script_path)  # Copia o novo script para o lugar do antigo
 
-        # Limpa a pasta de nova versão
+        # Primeiro, executa o novo script
+        os.execv(sys.executable, ['python', new_script_path])
+        
+        # O novo script precisa verificar se ele está dentro de um sistema de atualização
+        # e se um script anterior existe
+        previous_script_path = os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])), 'atualizacoes.py')
+        
+        if os.path.exists(previous_script_path):
+            print(f"Old script found. Deleting {previous_script_path}...")
+            os.remove(previous_script_path)  # Deleta o script antigo
+
+        # Copia o novo script para substituir o antigo
+        current_script_path = os.path.realpath(sys.argv[0])
+        shutil.copy(new_script_path, current_script_path)  # Copia o novo script para o lugar do antigo
+
+        # Deleta a pasta temporária
         shutil.rmtree(download_folder)
+
+        print("Update complete. Closing...")
+        sys.exit(0)
 
     else:
         print("No new version found or the new version is not greater.")
