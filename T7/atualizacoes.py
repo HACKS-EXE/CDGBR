@@ -8,7 +8,7 @@ import re
 __version__ = "12.0.0"  # Altere isso para a versão atual do seu script
 
 # URL do script que será baixado (com uma versão diferente)
-new_script_url = "URL_DO_SEU_NOVO_SCRIPT_PYTHON"  # Substitua pela URL real
+new_script_url = "https://raw.githubusercontent.com/HACKS-EXE/CDGBR/refs/heads/cod/T7/atualizacoes.py"  # Substitua pela URL real
 
 def get_version_from_script(script_content):
     match = re.search(r'__version__ = "(.*?)"', script_content)
